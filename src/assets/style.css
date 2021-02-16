@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css2?family=Arimo");
 
 * {
-  font-family: "Raleway", sans-serif;
+  font-family: "Arimo", sans-serif;
 }
 
 .container {
@@ -47,7 +47,7 @@
 .answerBtn {
   position: relative;
   padding: 10px;
-  background-color: rgb(250, 151, 37);
+  background-color: rgb(23, 133, 51);
   display: inline-block;
   margin: 10px;
   outline: none;
@@ -77,8 +77,9 @@
   font-size: 1.4em;
   padding: 10px;
   top: 350px;
-  background-color: rgb(46, 182, 46);
-  color: rgb(255, 255, 255);
+  background-color: rgb(231, 158, 68);
+  border-radius: 10px;
+  color: black;
   width: 150px;
   left: 0px;
   right: 0px;
