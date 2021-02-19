@@ -1,24 +1,24 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./assets/style.css";
-import quizService from "./quizService";
+import QuestionRoot from "./QuestionRoot";
 import QuestionBox from "./components/QuestionBox";
 import Result from "./components/Result"
 
 class KnowCS extends Component {
     state = {
-        questionBank: [],
+        questionSet: [],
         score: 0,
         responses: 0
     };
     getQuestions = () => {
-        quizService().then(question => {
+        QuestionRoot().then(question => {
             this.setState({
-                questionBank: question
+                questionSet: question
             });
         });
     };
-    computeAnswer = (answer, correctAnswer) => {
+    getAnswer = (answer, correctAnswer) => {
         if (answer === correctAnswer) {
             this. setState({
             score: this.state.score + 1
@@ -28,10 +28,10 @@ class KnowCS extends Component {
             responses: this.state.responses < 5 ? this.state.responses + 1 : 5
         });
     }
-    playAgain = () => {
+    resetInstance = () => {
         this.getQuestions();
         this.setState({
-            questionBank: [],
+            questionSet: [],
             score: 0,
             responses: 0
         });
@@ -43,21 +43,21 @@ class KnowCS extends Component {
         return (
             <div className="container">
                 <div className="title">Know CS: Algorithms, Data Structures and Concepts</div>
-                {this.state.questionBank.length > 0 && 
+                {this.state.questionSet.length > 0 && 
                 this.state.responses < 5 &&
-                this.state.questionBank.map(
+                this.state.questionSet.map(
                     ({question, answers, correct, questionID}) => (
                         <QuestionBox 
                         question={question}
                         options={answers}
                         key={questionID}
-                        selected={answer => this.computeAnswer(answer, correct)}
+                        selected={answer => this.getAnswer(answer, correct)}
                         />
                     )
                 )}
                 {this.state.responses === 5 ? (<Result 
                 score={this.state.score}
-                playAgain={this.playAgain}
+                resetInstance={this.resetInstance}
                 />) : null } 
             </div>
         );
