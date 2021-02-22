@@ -6,14 +6,15 @@
 
 
 .container {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
   min-width: 80%;
   min-height: fit-content;
   border: 0;
   box-shadow: 0 0 2em rgba(0, 0, 0, 0.483);
   border-radius: 1em;
   padding: 1em;
-  margin: 1% 5%;
+  margin: 1% 2%;
   box-sizing: border-box;
   background-image: linear-gradient(180deg,white, rgba(0, 0, 0, 0.545));
 }
@@ -26,7 +27,8 @@ padding-right: 0.5em;
 }
 
 .title {
-  position: relative;
+  flex-wrap: nowrap;
+  text-align: center;
   background-color: rgba(0, 0, 0, 1);
   box-shadow: 0 0 .2em rgb(92, 91, 91);
   color: rgb(255, 255, 255);
@@ -43,7 +45,6 @@ padding-right: 0.5em;
 }
 
 .questionBox {
-  position: relative;
   border: .1em solid rgba(0, 0, 0, 0.2);
   margin-top: .3em;
   padding: 1em;
@@ -52,7 +53,6 @@ padding-right: 0.5em;
 }
 
 .answerBtn {
-  position: relative;
   padding: 10px;
   background-color: rgb(23, 133, 51);
   box-shadow: .2em .2em .2em rgba(95, 94, 94, 0.456);
@@ -75,15 +75,21 @@ transform:translateY(-.25em)
 }
 
 .score-board {
-  position: relative;
   height: 85%;
+  background-color: rgb(255, 255, 255);
+  padding: 1em;
+  margin: 1em;
+  width: fit-content;
+  border-radius: 1em;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
 }
 
 .score {
-  min-width: 80%;
-  margin: 10% 10% 0 10%;
   font-size: 2em;
-  text-align: center;
+  justify-self: center;
+  align-self: center;
 }
 
 .playBtn {

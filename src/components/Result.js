@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 const Result = ({score, resetInstance}) => (
     <div className="score-board">
-        <div className="score">You scored {score} / 10 correct answers!</div>
+        <div className="score">You answered {score} / 10 answers correctly.</div>
         <button className="playBtn" onClick={resetInstance}>
-            Play again!
+            Try again
         </button>
     </div>
 )
