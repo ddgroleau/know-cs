@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import "./assets/style.css";
 import QuestionRoot from "./QuestionRoot";
 import QuestionBox from "./components/QuestionBox";
-import Result from "./components/Result"
+import Result from "./components/Result";
+import Logo from "./images/knowcs-icon.png";
 
 class KnowCS extends Component {
     state = {
@@ -42,7 +43,10 @@ class KnowCS extends Component {
     render() {
         return (
             <div className="container">
-                <div className="title">Know CS: Algorithms, Data Structures and Concepts</div>
+                <div className="title">
+                <img src={Logo}/>
+                Know CS: Algorithms, Data Structures and Concepts
+                </div>
                 {this.state.questionSet.length > 0 && 
                 this.state.responses < 5 &&
                 this.state.questionSet.map(
