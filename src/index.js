@@ -26,7 +26,7 @@ class KnowCS extends Component {
             });
         }
         this.setState({
-            responses: this.state.responses < 5 ? this.state.responses + 1 : 5
+            responses: this.state.responses < 10 ? this.state.responses + 1 : 10
         });
     }
     resetInstance = () => {
@@ -48,7 +48,7 @@ class KnowCS extends Component {
                 Know CS: Algorithms, Data Structures and Concepts
                 </div>
                 {this.state.questionSet.length > 0 && 
-                this.state.responses < 5 &&
+                this.state.responses < 10 &&
                 this.state.questionSet.map(
                     ({question, answers, correct, questionID}) => (
                         <QuestionBox 
@@ -59,7 +59,7 @@ class KnowCS extends Component {
                         />
                     )
                 )}
-                {this.state.responses === 5 ? (<Result 
+                {this.state.responses === 10 ? (<Result 
                 score={this.state.score}
                 resetInstance={this.resetInstance}
                 />) : null } 
