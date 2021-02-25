@@ -4,6 +4,7 @@
   "description": "know-cs project backend",
   "main": "server,js",
   "scripts": {
+    "prod": "node server.js",
     "server": "nodemon server.js",
     "client": "cd ../application && npm start"
   },
