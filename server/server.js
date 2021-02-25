@@ -5,16 +5,21 @@ const bodyParser = require('body-parser');
 const Router = express.Router();
 const { response, request } = require('express');
 const endpoint = require('./endpoint');
+const path = require('path');
 
 // EXPRESS
 const app = express();
 const port = process.env.PORT || 3080
 app.listen(port, () => console.log(`Server started at Port: ${port}`));
-app.use(express.static('../application/public'))
+app.use(express.static(path.join(__dirname, '../client/build')));
 app.use(express.json({limit: '1mb'}));
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use('/', endpoint);
+
+app.get('/', (req,res)=> {
+    res.sendFile(path.join(__dirname, '../client/build'));
+})
 
 
 // Error Handling 

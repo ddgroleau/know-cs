@@ -1,0 +1,20 @@
+{
+  "name": "know-cs-root",
+  "version": "1.0.0",
+  "description": "root",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd server && npm run server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddgroleau/know-cs.git"
+  },
+  "author": "Dan Groleau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ddgroleau/know-cs"
+  },
+  "homepage": "https://github.com/ddgroleau/know-cs#readme"
+}
