@@ -11,15 +11,15 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3080
 app.listen(port, () => console.log(`Server started at Port: ${port}`));
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, "../client/build")));
 app.use(express.json({limit: '1mb'}));
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use('/', endpoint);
 
 app.get('/', (req,res)=> {
-    res.sendFile(path.join(__dirname, '../client/build'));
-})
+    res.sendFile(path.resolve("client", "build", "index.html"));
+});
 
 
 // Error Handling 
