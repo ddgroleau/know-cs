@@ -3,6 +3,22 @@
   "version": "1.0.0",
   "description": "root",
   "main": "index.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.7.1",
+    "npm": "^7.5.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.2",
+    "web-vitals": "^1.1.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-router": "0.0.1",
+    "node-postgres": "^0.6.2",
+    "pg": "^8.5.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd server && npm run prod"
