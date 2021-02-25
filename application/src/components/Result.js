@@ -4,7 +4,7 @@ const Result = ({score, resetInstance}) => (
     <div className="score-board">
         <div className="score">You answered {score} / 10 answers correctly.</div>
         <button className="playBtn" onClick={resetInstance}>
-            Try again
+            Play again
         </button>
     </div>
 )
