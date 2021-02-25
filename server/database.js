@@ -6,7 +6,7 @@ const client = new Client({
     password: process.env.PGPASS,
     host: process.env.PGHOST,
     port: process.env.PGPORT,
-    database: 'knowcs'
+    database: process.env.PGDB
 })
 
 client.connect()
