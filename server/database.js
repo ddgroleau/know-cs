@@ -6,11 +6,14 @@ const client = new Client({
     password: process.env.PGPASS,
     host: process.env.PGHOST,
     port: process.env.PGPORT,
-    database: process.env.PGDB
+    database: process.env.PGDB,
+    ssl: {
+        rejectUnauthorized: false
+      }
 })
 
 client.connect()
 .then(() => console.log("Database connection successful!"))
-.catch(e => console.log("Database connection failed."))
+.catch(e => console.log(e + "Database connection failed."))
 
 module.exports = client;
