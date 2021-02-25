@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# The Know CS Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Know CS, or "Know Computer Science" is a simple quiz application, designed to teach and reinforce computer science concepts, algorithms, and data structures.
+The app features a ten question interface, which prompts the user to choose from a selection of multiple choice answers, and gives the user a score once all responses have been submitted. The questions are sourced from a Postgres database, containing over 50 CS multiple-choice questions. 
 
-## Available Scripts
+Please see the acknowledgements below for question references.
 
-In the project directory, you can run:
 
-### `npm start`
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Node.js
+* React
+* Postgres
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Deployment
 
-### `npm test`
+Deployed on Heroku at https://know-cs.herokuapp.com
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Built With
 
-### `npm run build`
+* React 
+* Node.js / Express, SQL 
+* Postgres for Database/Database Management
+* HTML5 / CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Authors
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **Dan Groleau** 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## License
 
-### `npm run eject`
+This project is licensed under the MIT License.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Acknowledgments
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+References:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Althoff, C. (2017). The Self-Taught Programmer. Triangle Connection LLC. 
+McDowell, G. L. (2020). Cracking the Coding Interview: 189 Programming Questions and Solutions. CareerCup, LLC. 
+Springer, W. M. (2020). A Programmer's Guide to Computer Science (Vol. I &amp; II). Jaxson Media. 
+Wengrow, J., &amp; MacDonald, B. (2020). A Common-Sense Guide to Data Structures and Algorithms. The Pragmatic Bookshelf. 
