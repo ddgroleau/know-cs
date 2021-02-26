@@ -6,6 +6,7 @@ const Router = express.Router();
 const { response, request } = require('express');
 const endpoint = require('./endpoint');
 const path = require('path');
+const { root } = require('npm');
 
 // EXPRESS
 const app = express();
@@ -18,9 +19,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/', endpoint);
 
 app.get('/', (req,res)=> {
-    res.sendFile("../client/build/static/index.html");
+    res.sendFile(path.join(__dirname.replace("/server", ""), "../client/build"));
 });
-console.log(__dirname);
+console.log(__dirname.replace("/server", ""));
+
 
 // Error Handling 
 app.use((request, response) => {
