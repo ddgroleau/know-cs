@@ -18,9 +18,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/', endpoint);
 
 app.get('/', (req,res)=> {
-    res.sendFile(__dirname + "../client/build/static/index.html");
+    res.sendFile(path.resolve(__dirname, "/client/build/static/index.html"));
 });
-
+console.log(__dirname);
 
 // Error Handling 
 app.use((request, response) => {
